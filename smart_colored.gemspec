@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smart_colored}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ivan Kuchin"]
-  s.date = %q{2011-02-12}
+  s.date = %q{2011-02-14}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.markdown"
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/smart_colored.rb",
     "lib/smart_colored/extend.rb",
+    "smart_colored.gemspec",
     "spec/smart_colored_spec.rb",
     "spec/spec_helper.rb"
   ]
