@@ -91,9 +91,9 @@ module SmartColored
     map_name_to_attributes extra, {extra => true}
   end
 
-  part_regexp = "(?:on_)?(?:#{COLOR_CODES.keys.join('|')})|#{FORMAT_CODES.keys.join('|')}"
-  COMBINED_REGEXP = /^#{part_regexp}{2,}$/
-  COMBINED_REGEXP_PART = /#{part_regexp}/
+  PART_REGEXP = "(?:on_)?(?:#{COLOR_CODES.keys.join('|')})|#{FORMAT_CODES.keys.join('|')}"
+  COMBINED_REGEXP = /^#{PART_REGEXP}{2,}$/
+  COMBINED_REGEXP_PART = /#{PART_REGEXP}/
 
   def method_missing(method, *arguments, &block)
     if (method_s = "#{method}_") =~ COMBINED_REGEXP
