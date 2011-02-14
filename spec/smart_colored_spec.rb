@@ -1,6 +1,20 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe SmartColored do
+  describe "proxied" do
+    it "should work" do
+      'bold red on green'.colored.bold_red_on_green.should == "\e[1;31;42m" 'bold red on green' "\e[0m"
+    end
+
+    it "should return String subclass" do
+      'bold red on green'.colored.should be_instance_of(SmartColored::String)
+    end
+
+    it "should return String subclass after applying" do
+      'bold red on green'.colored.red.should be_instance_of(SmartColored::String)
+    end
+  end
+
   describe "simple" do
     it "should apply none" do
       'clear'.apply_format.should == 'clear'

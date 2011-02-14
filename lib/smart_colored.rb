@@ -74,10 +74,10 @@ module SmartColored
     self.class.new(str)
   end
 
-  NAME_TO_ATTRIBUTES = {}
+  @@name_to_attributes = {}
   def self.map_name_to_attributes(name, attributes)
     name = name.to_sym
-    NAME_TO_ATTRIBUTES[name] = attributes
+    @@name_to_attributes[name] = attributes
     define_method name do
       apply_format(attributes)
     end
@@ -97,7 +97,7 @@ module SmartColored
 
   def method_missing(method, *arguments, &block)
     if (method_s = "#{method}_") =~ COMBINED_REGEXP
-      attributes = NAME_TO_ATTRIBUTES.values_at(*method_s.scan(COMBINED_REGEXP_PART).map(&:to_sym)).inject(&:merge)
+      attributes = @@name_to_attributes.values_at(*method_s.scan(COMBINED_REGEXP_PART).map(&:to_sym)).inject(&:merge)
       SmartColored.map_name_to_attributes method, attributes
       apply_format(attributes)
     else
