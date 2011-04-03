@@ -20,6 +20,10 @@ module SmartColored
 
   CLEAR_SEQUENCE = "\e[0m"
 
+  def width
+    gsub(/\e\[\d+(?:;\d+)*m/, '').length
+  end
+
   def apply_format(format = {})
     apply_attributes = {}
     if color = COLOR_CODES[format[:color]]

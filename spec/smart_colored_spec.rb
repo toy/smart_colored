@@ -15,6 +15,24 @@ describe SmartColored do
     end
   end
 
+  describe "width" do
+    it "should return width for unformatted string" do
+      'string'.width.should == 'string'.length
+    end
+
+    it "should return width of red string" do
+      'string'.red.width.should == 'string'.length
+    end
+
+    it "should return width of bold underline cyan string" do
+      'string'.bold_underline_cyan.width.should == 'string'.length
+    end
+
+    it "should return width of complex formatted string" do
+      "#{"on yellow #{'red underlined'.red.underline} on yellow".on_yellow} #{"bold red".bold.red} blue inversed".blue.inverse.width.should == "on yellow red underlined on yellow bold red blue inversed".length
+    end
+  end
+
   describe "simple" do
     it "should apply none" do
       'clear'.apply_format.should == 'clear'
