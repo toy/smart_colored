@@ -37,7 +37,7 @@ module SmartColored
     previous_attributes = {}
     clear_sequence = false
     str = "#{CLEAR_SEQUENCE}#{self}"
-    str.gsub!(/(?:(?:\e\[\d+(?:;\d+)*m)+)/) do |m|
+    str.gsub!(/(?:\e\[\d+(?:;\d+)*m)+/) do |m|
       unless $'.empty?
         codes = m.scan(/\d+/).map(&:to_i).uniq
         sequence_attributes = {}
