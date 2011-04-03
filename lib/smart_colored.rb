@@ -92,7 +92,7 @@ module SmartColored
   end
 
   PART_REGEXP = "(?:on_)?(?:#{COLOR_CODES.keys.join('|')})|#{FORMAT_CODES.keys.join('|')}"
-  COMBINED_REGEXP = /^#{PART_REGEXP}{2,}$/
+  COMBINED_REGEXP = /^(?:(?:#{PART_REGEXP})_){2,}$/
   COMBINED_REGEXP_PART = /#{PART_REGEXP}/
 
   def method_missing(method, *arguments, &block)

@@ -89,7 +89,7 @@ describe SmartColored do
     end
 
     it "should apply bold, underlined, cyan on yellow" do
-      %w[bold underlined cyan on_yellow].permutation.each do |parts|
+      %w[bold underline cyan on_yellow].permutation.each do |parts|
         'bold underlined cyan'.send(parts.join('_')).should == "\e[1;4;36;43m" 'bold underlined cyan' "\e[0m"
       end
     end
