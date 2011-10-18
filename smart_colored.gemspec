@@ -4,12 +4,12 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{smart_colored}
-  s.version = "1.0.2"
+  s.name = "smart_colored"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ivan Kuchin"]
-  s.date = %q{2011-02-14}
+  s.date = "2011-10-18"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.markdown"
@@ -26,15 +26,11 @@ Gem::Specification.new do |s|
     "spec/smart_colored_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/toy/smart_colored}
+  s.homepage = "http://github.com/toy/smart_colored"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.0}
-  s.summary = %q{Color and formatting in terminal}
-  s.test_files = [
-    "spec/smart_colored_spec.rb",
-    "spec/spec_helper.rb"
-  ]
+  s.rubygems_version = "1.8.11"
+  s.summary = "Color and formatting in terminal"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
