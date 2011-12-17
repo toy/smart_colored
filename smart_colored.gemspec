@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'smart_colored'
-  s.version     = '1.1.0'
+  s.version     = '1.1.1'
   s.summary     = %q{Color and formatting in terminal}
   s.homepage    = "http://github.com/toy/#{s.name}"
   s.authors     = ['Ivan Kuchin']
