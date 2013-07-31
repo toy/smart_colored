@@ -1,4 +1,6 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'rspec'
+require 'smart_colored/extend'
 
 describe SmartColored do
   describe "proxied" do
