@@ -2,6 +2,8 @@
 
 Color and formatting in terminal
 
+[![Build Status](https://travis-ci.org/toy/smart_colored.png?branch=master)](https://travis-ci.org/toy/smart_colored)
+
 ## Synopsis
 
     require 'smart_colored'
